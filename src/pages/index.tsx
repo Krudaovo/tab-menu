@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { createContext, useContext } from 'react';
 import Layout from '../components/layout';
 import { graphql, HeadProps } from 'gatsby';
+import TabMenu from '../components/tab-menu';
 
 type MetaTypes = {
   site: {
@@ -16,13 +17,21 @@ type MetaTypes = {
   }
 }
 
+type ProgramLanguageTypes = string[]
+const language: ProgramLanguageTypes = [
+  'Python', 'C', 'C++', 'Java', 'C#', 'Visual Basic', 'Javascript', 'SQL', 'Assembly', 'PHP', 'R', 'Go'
+];
+export const LanguageContext = createContext(language);
+
 export default function Home() {
   return (
     <>
       <Layout>
-        <div>
-          hello world
-        </div>
+        <main className='h-screen w-full bg-gradient-to-tr from-yellow-300 to-lime-300'>
+          <LanguageContext.Provider value={language}>
+            <TabMenu />
+          </LanguageContext.Provider>
+        </main>
       </Layout>
     </>
   );
