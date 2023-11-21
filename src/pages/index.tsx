@@ -1,4 +1,4 @@
-import React, { createContext, useContext } from 'react';
+import React, { createContext } from 'react';
 import Layout from '../components/layout';
 import { graphql, HeadProps } from 'gatsby';
 import TabMenu from '../components/tab-menu';
@@ -17,13 +17,22 @@ type MetaTypes = {
   }
 }
 
-type ProgramLanguageTypes = string[]
+type ProgramLanguageTypes = {
+  id: number
+  name: string
+}[]
+
 const language: ProgramLanguageTypes = [
-  'Python', 'C', 'C++', 'Java', 'C#', 'Visual Basic', 'Javascript', 'SQL', 'Assembly', 'PHP', 'R', 'Go'
+  { id: 1, name: 'Next.js' },
+  { id: 2, name: 'Gatsby' },
+  { id: 3, name: 'Docusaurus' },
+  { id: 4, name: 'Astro' },
+  { id: 5, name: 'Qwik' },
+  { id: 6, name: 'Cuttlebelle' }
 ];
 export const LanguageContext = createContext(language);
-
 export default function Home() {
+
   return (
     <>
       <Layout>
