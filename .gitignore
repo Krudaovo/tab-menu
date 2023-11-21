@@ -4,6 +4,6 @@ public
 src/gatsby-types.d.ts
 .nvmrc
 *.tgz
-.env.develop
-.env.product
+.env.development
+.env.production
 .env
