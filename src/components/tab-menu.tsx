@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import TabName from './tab-name';
 import Content from './content';
+import { onChangeTabMenuMatrik } from '../gsap/animation';
 
 export default function TabMenu() {
 
@@ -74,12 +75,15 @@ export default function TabMenu() {
   }
 
   useEffect(() => {
-    onClickTab()
-  }, [])
+    onClickTab();
+    onChangeTabMenuMatrik();
+  }, []);
 
   return (
     <>
-      <div className='w-1/2 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
+      <div
+        id='tab-menu'
+        className='w-1/2 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
         <div className='w-full h-full animate-material-shadow-md'>
           <TabName
             next={nextIsClicked}
