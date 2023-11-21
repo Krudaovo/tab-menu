@@ -4,9 +4,9 @@ const config: GatsbyConfig = {
   siteMetadata: {
     charset: 'utf-8',
     lang: 'ja',
-    title: '',
-    description: '',
-    siteUrl: 'https://localhost:8000/',
+    title: 'tab-menu-demo',
+    description: 'タブメニューをできるだけReactの機能を活かして制作しました。',
+    siteUrl: 'https://tab-menu-demo.netlify.app/',
     themeColor: '#',
     // ogp:type
     // website, article, blog
@@ -17,7 +17,7 @@ const config: GatsbyConfig = {
     // actor, athlete, author, director, musician, politician, profile, public_figure
     // city, country, landmark, state_province,
     // activity, sport
-    ogpType: ''
+    ogpType: 'product'
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
