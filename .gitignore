@@ -4,5 +4,3 @@ public
 src/gatsby-types.d.ts
 .npmrc
 .nvmrc
-*.tgz
-!gsap-bonus.tgz
